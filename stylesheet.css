@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #888888;
+    padding: 0;
+    margin: 0;
+}
+
+#science-card {
+    background-color: greenyellow;
+}
+
+#question {
+    font-size: 15px;
+}
+
+#question li {
+    margin-bottom: 10px;
+}
+
+#quizimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+}
+
+.cropped {
+    width: 100%; /* width of container */
+    height: 200px; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+/* .cropped img {
+    margin: -10px 0px 0px -180px;
+} */
+
+/* Quiz */
+
+.hide {
+    display: block;
+}
+
+#question-body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-bitch {
+    overflow-y:scroll;
+    font-size: 32px;
+}
+
+.alien {
+    background-color: black;
+    color: chartreuse !important;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#graph-col {
+    background-color: darkblue;
+    height: 200px;
+    margin-bottom: 50px;
+    color: white !important;
+}
+
+.bigger-links {
+    font-size: 24px;
+}

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thinkful Javascript Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is what search sees">
+    <link rel="icon" href="mooseground.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Thinking Well</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thinkful</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Warp Speed</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-9">
+                    <h1 class="display-4 text-white mt-5 mb-2">The Javascript Take-Home Problem Sets</h1>
+                    <p class="lead mb-5 text-white-50">This is for practicing javascript. I will do many coding
+                        challenges to bring my skills up to par. This will contain the first two coding challenges from
+                        Thinkful. </p>
+                </div>
+                <div class="col-lg-3">
+                    <img src="mooseground.ico" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 mb-5">
+                <h2>What We Do</h2>
+                <hr>
+                <p>mesh vertical supply-chains // reinvent mission-critical mindshare // integrate sticky models //
+                    reintermediate leading-edge infomediaries // leverage scalable mindshare // streamline innovative
+                    systems // disintermediate robust solutions</p>
+                <a class="btn btn-primary btn-lg" href="#">Engage &raquo;</a>
+            </div>
+            <div class="col-md-4 mb-5">
+                <h2>Contact Us</h2>
+                <hr>
+                <address>
+                    <strong>A place</strong>
+                    <br>7777 seven st
+                    <br>Beverly Hills, CA 90210
+                    <br>
+                </address>
+                <address>
+                    <abbr title="Phone">P:</abbr>
+                    (720) 297-9827
+                    <br>
+                    <abbr title="Email">E:</abbr>
+                    <a href="mailto:#">ryan@whitmorespace.com</a>
+                </address>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cra3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Shopping List</h4>
+                    <ul class="card-text">
+                        <li>Pencil</li>
+                        <li>Paper</li>
+                        <li>Crayons</li>
+                        <li>Ruler</li>
+                        <li>Compass</li>
+                        <li>staples</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cra1.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Total Price of Shopping List:</h4>
+                    <div id="total-price">
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cra2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Item Lookup</h4>
+                    <div class="card-text" id="item-lookup">
+                        <form id="item-lookup-form">
+                            <input id="item-lookup-input" type="text">
+                            <button id="item-lookup-button">Look Up Item Price</button>
+                        </form>
+                        <div id="item-lookup-demo">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="neat.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Table displaying Object</h4>
+                    <div id="items-table-floor" class="container-fluid card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="neat2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Hello World</h4>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="neat3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Killian</h4>
+                    <div class="card-text">
+                        Some Text Here
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /row -->
+    <div class="row" id="graph-row">
+        <div id="graph-col" class="col-md-12">
+
+        </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp01.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp02.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp03.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp01.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp02.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp03.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp01.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp02.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">broken links</h4>
+                    <div class="card-text">
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            0</a>
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            1</a>
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            2</a>
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            3</a>
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            4</a>
+                        <a class="rick-roll" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link
+                            5</a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button onclick="linkCatcher()" class="btn btn-primary">Bigger Links</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="warp03.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">millions</h4>
+
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cardzio.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">One Hundred</h4>
+                    <form id="onehundred-form">
+                        <input id="h-number-a" type="number">
+                        <input id="h-number-b" type="number">
+                        <button type="submit" id="h-number-submit">One Hundred?</button>
+                    </form>
+                    <div class="card-text" id="h-number-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cardzio2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">File Extension</h4>
+                    <form id="file-ext-form">
+                        <input id="file-ext-input" type="text">
+                        <button id="file-ext-submit">Enter File Name</button>
+                    </form>
+                    <div class="card-text" id="file-ext-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cardzio3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Shift Characters</h4>
+                    <form id="shift-char-form">
+                        <input type="text" id="shift-char-input">
+                        <button type="submit" id="shift-char-submit">Shift the Characters</button>
+                    </form>
+                    <div class="card-text" id="shift-char-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="Untitled.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Today's Date</h4>
+                    <p class="card-text">Today's Date is:</p>
+                    <div class="card-text" id="todays-date">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="Untitled2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Combine Strings</h4>
+                    <form id="combine-strings-form">
+                        <input id="combine-string-a" type="text">
+                        <input id="combine-string-b" type="text">
+                        <button id="combine-string-submit" type="submit">Combine Strings</button>
+                    </form>
+                    <div class="card-text" id="combine-demo">
+
+                    </div>
+                    <p class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="Untitled3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Three String</h4>
+                    <p class="card-text" style="font-size:12px;">Enter a string and return the first three
+                        characters joined with the last
+                        three characters as a new string.</p>
+                    <form id="three-string-form">
+                        <input id="three-string-input" type="text">
+                        <button id="three-string-submit">Three String It</button>
+                    </form>
+                    <div class="card-text" id="three-string-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="jxb1.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Jumble these Strings</h4>
+                    <form id="jumble-form">
+                        <input type="text" id="jumble-input-a">
+                        <input type="text" id="jumble-input-b">
+                        <button id="jumble-button">Jumble!</button>
+                    </form>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 mb-5" id="jumbled-log">
+            <div class="card h-100">
+                <div class="container">
+                    <h4 class="card-title"> The Jumbled Words</h4>
+                    <blockquote class="container-fluid" id="jumble-demo"></blockquote>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cree1.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Occurances</h4>
+                    <form id="occurances-form">
+                        <input id="occurances-input-a" type="text">
+                        <input id="occurances-input-b" type="texy">
+                        <button id="occurances-submit" type="submit">Occurances</button>
+                    </form>
+                    <div class="card-text" id="occurances-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cree2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Closest to 100</h4>
+                    <form id="closest-to-100-form">
+                        <input id="c-number-a">
+                        <input id="c-number-b">
+                        <button id="closest-to-100-submit" type="submit">One Hundred?</button>
+                    </form>
+                    <div class="card-text" id="closest-to-100-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="cree3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">concatenate</h4>
+                    <form id="con-form">
+                        <input id="con-input-1" type="text">
+                        <input id="con-input-2" type="text">
+                        <button id="con-submit" type="submit">concatenate</button>
+                    </form>
+                    <div id="con-demo" class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="yolo1.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">String to Array</h4>
+                    <form id="string-to-array-form">
+                        <input type="text" id="string-to-array-input">
+                        <button id="string-to-array-submit">
+                            string to array
+                        </button>
+                    </form>
+                    <div id="string-to-array-demo">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="yolo2.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Iteration</h4>
+                    <p class="card-text">array.forEach(function(item, index){});</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="yolo3.png" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Science</h4>
+                    <p class="card-text">"Try not to become a person of success, but rather try to become a person
+                        of value." --Albert Einstein.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Don't think. Feel.</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script src="iteration.js"></script>
+    <script src="shopping.js"></script>
+    <script src="sciencequiz.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
